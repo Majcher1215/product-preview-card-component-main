@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+    * {
+      box-sizing: content-box;
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      /* Primary colors*/
+      --darkCyan: hsl(158, 36%, 37%);
+      --cream: hsl(30, 38%, 92%);
+      /* Neutral */
+      --veryDarkBlue: hsl(212, 21%, 14%);
+      --darkGrayishBlue: hsl(228, 12%, 48%);
+      --white: hsl(0, 0%, 100%);
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--cream);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .preview {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 5%;
+        align-content: space-around;
+    }
+
+    .preview-description {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    p {
+        color: var(--darkGrayishBlue);
+        margin: 1em 1.2em;
+        line-height: 1.5em;
+    }
+
+    #perfume {
+        color: var(--darkGrayishBlue);
+        margin: 1.6em 1.2em 0.7em;
+        font-size: 1em;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+    }
+
+    h2 {
+        color: var(--veryDarkBlue);
+        font-family: 'Fraunces', sans-serif;
+        font-size: 2.3em;
+        margin-left: 0.5em;
+    }
+
+    #new-price {
+        color: var(--darkCyan);
+        font-size: 2em;
+        font-family: 'Fraunces', sans-serif;
+    }
+
+    #old-price {
+        text-decoration: line-through;  
+    }
+
+    .addToCartButton{
+        width: 50%;
+        background-color: var(--darkCyan); /* Green */
+        border: none;
+        color: white;
+        padding: 1em 4em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.15em;
+        margin: 1em auto;
+        border-radius: 5%;
+      }
+
+      #shopping-icon {
+        margin-top: 0.1em;
+        margin-right: 0.8em;
+      }
+
+
+    /* Media Query for Mobile Devices */
+    @media (max-width: 480px) {
+            .preview-photo {
+              content:url("/images/image-product-mobile.jpg");
+              border-top-left-radius: 5%;
+              border-top-right-radius: 5%;
+            }
+        }
+          
+    /* Media Query for Laptops and Desktops */
+    @media (min-width: 480px) {
+      .preview {
+        width: 40%;
+        height: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .preview-photo {
+              content:url("/images/image-product-desktop.jpg");
+              border-top-left-radius: 3%;
+              border-bottom-left-radius:  3%;
+            } 
+       h2 {
+        font-size: 3em;
+       }
+
+       #perfume {
+        font-size: 1.5em;
+       }
+
+       p {
+        line-height: 1.7em;
+       }
+    }
+    
