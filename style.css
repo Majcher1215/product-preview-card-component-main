@@ -95,7 +95,7 @@
     /* Media Query for Mobile Devices */
     @media (max-width: 480px) {
             .preview-photo {
-              content:url("images/image-product-mobile.jpg");
+              content:url("./images/image-product-mobile.jpg");
               border-top-left-radius: 5%;
               border-top-right-radius: 5%;
             }
@@ -112,7 +112,7 @@
       }
 
       .preview-photo {
-              content:url("images/image-product-desktop.jpg");
+              content:url("./images/image-product-desktop.jpg");
               border-top-left-radius: 3%;
               border-bottom-left-radius:  3%;
             } 
