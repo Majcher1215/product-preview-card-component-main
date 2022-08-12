@@ -32,6 +32,7 @@
         background-color: white;
         border-radius: 5%;
         align-content: space-around;
+        flex-shrink: 3;
     }
 
     .preview-description {
@@ -84,6 +85,7 @@
         font-size: 1.15em;
         margin: 1em auto;
         border-radius: 5%;
+        flex-grow: 0;
       }
 
       #shopping-icon {
@@ -92,8 +94,7 @@
       }
 
 
-    /* Media Query for Mobile Devices */
-    @media (max-width: 480px) {
+    @media (max-width: 800px) {
             .preview-photo {
               content:url("./images/image-product-mobile.jpg");
               border-top-left-radius: 5%;
@@ -101,10 +102,9 @@
             }
         }
           
-    /* Media Query for Laptops and Desktops */
-    @media (min-width: 480px) {
+    @media (min-width: 800px) and (max-width: 1320px) {
       .preview {
-        width: 40%;
+        width: 90%;
         height: 60%;
         display: flex;
         flex-direction: row;
@@ -129,3 +129,29 @@
        }
     }
     
+    @media (min-width: 1320px) {
+      .preview {
+        width: 50%;
+        height: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .preview-photo {
+              content:url("./images/image-product-desktop.jpg");
+              border-top-left-radius: 3%;
+              border-bottom-left-radius:  3%;
+            } 
+       h2 {
+        font-size: 3em;
+       }
+
+       #perfume {
+        font-size: 1.5em;
+       }
+
+       p {
+        line-height: 1.7em;
+       }
+    }
